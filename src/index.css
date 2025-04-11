@@ -1,0 +1,204 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Quiz Component Styles */
+.quiz-option {
+  @apply p-3 border border-gray-200 rounded-md cursor-pointer transition-all duration-200 hover:bg-gray-50;
+}
+
+.quiz-option.selected {
+  @apply border-primary bg-primary/5;
+}
+
+.quiz-option.correct {
+  @apply border-green-500 bg-green-50;
+}
+
+.quiz-option.incorrect {
+  @apply border-red-500 bg-red-50;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.animate-pulse-light {
+  animation: pulsate 1s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.98); opacity: 0.8; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulsate {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Card hover effects */
+.hover-scale {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.bgGradient{
+  
+ 
+
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='table' tableValues='0 1'/%3E%3CfeFuncG type='table' tableValues='0 1'/%3E%3CfeFuncB type='table' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E"), radial-gradient(circle at 94.9353448275862% 95.81395348837209%, #6893E8 0px, transparent 10%), radial-gradient(circle at 1.0775862068965518% 17.674418604651162%, #6893E8 0px, transparent 10%);
+  background-color: white;
+  background-blend-mode: overlay, normal, normal;
+  
+  
+  
+}
+.bgGradient2{
+  
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='table' tableValues='0 1'/%3E%3CfeFuncG type='table' tableValues='0 1'/%3E%3CfeFuncB type='table' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E"), radial-gradient(circle at 94.9353448275862% 95.81395348837209%, #6893E8 0px, transparent 65%), radial-gradient(circle at 1.0775862068965518% 17.674418604651162%, #6893E8 0px, transparent 65%);
+  background-color: white;
+  background-blend-mode: overlay, normal, normal;
+  
+}
+.bgGradient3{
+  
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='table' tableValues='0 1'/%3E%3CfeFuncG type='table' tableValues='0 1'/%3E%3CfeFuncB type='table' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E"), radial-gradient(circle at 47.737068965517246% 100%, #6893e88c 0px, transparent 40%);
+  background-color: white;
+  background-blend-mode: overlay, normal, normal;
+  
+}
+
+/* css loder  */
+.loader {
+  position: relative;
+  width: 164px;
+  height: 164px;
+}
+.loader::before , .loader::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #6893E8;
+  left: 50%;
+  top: 50%;
+  animation: rotate 1s ease-in infinite;
+}
+.loader::after {
+width: 20px;
+height: 20px;
+background-color: #FF006E;
+animation: rotate 1s ease-in infinite, moveY 1s ease-in infinite ;
+}
+
+@keyframes moveY {
+0% , 100% {top: 10%}
+45% , 55% {top: 59%}
+60% {top: 40%}
+}
+@keyframes rotate {
+0% { transform: translate(-50%, -100%) rotate(0deg) scale(1 , 1)}
+25%{ transform: translate(-50%, 0%) rotate(180deg) scale(1 , 1)}
+45% , 55%{ transform: translate(-50%, 100%) rotate(180deg) scale(3 , 0.5)}
+60%{ transform: translate(-50%, 100%) rotate(180deg) scale(1, 1)}
+75%{ transform: translate(-50%, 0%) rotate(270deg) scale(1 , 1)}
+100%{ transform: translate(-50%, -100%) rotate(360deg) scale(1 , 1)}
+}
+  
