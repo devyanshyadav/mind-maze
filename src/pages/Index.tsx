@@ -44,7 +44,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pb-20 ">
+    <div className="min-h-screen h-full bg-white flex flex-col justify-between">
       <Header />
       
       <main className="container mx-auto px-4">
@@ -86,8 +86,8 @@ const Index = () => {
           <QuizHistory onBack={handleBackToWelcome} />
         )}
       </main>
-
-      <footer className="w-full p-1.5 absolute bottom-0 *:opacity-80 bg-blue-500 border-t-2 text-white grid place-items-center text-center text-xs">
+<br />
+      <footer className="w-full p-1.5 *:opacity-80 bg-blue-500 border-t-2 text-white grid place-items-center text-center text-xs">
         <span>
           Made with ❤️ by{" "}
           <a
